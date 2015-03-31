@@ -86,7 +86,7 @@ var FontViewer = {
       svg.setAttribute('height', FontViewer.settings.glyphSize.height+'px');
       svg.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
 
-      glyphName = String(glyph.getAttribute('glyph-name'));
+      glyphName = String(glyph.getAttribute('glyph-name')) || String(glyph.getAttribute('unicode'));
       FontViewer.glyphs[glyphName] = {name: glyphName, path: line, hoz: horizAdvance};
 
       container.className = 'fontViewer_'+glyphName;
